@@ -1,0 +1,212 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A Little Plan</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <a class="logo" href="#">S/01</a>
+
+    <div class="top-status">
+      <span class="status-dot"></span>
+      JUST BETWEEN US
+    </div>
+
+    <div class="top-index">2026 / 001</div>
+  </header>
+
+  <main class="main">
+
+    <!-- STEP 1 -->
+    <section class="screen active" id="screen-question">
+
+      <div class="eyebrow">
+        <span>AN IMPORTANT QUESTION</span>
+        <span class="line"></span>
+        <span>01 — 02</span>
+      </div>
+
+      <div class="content">
+
+        <div class="small-label">PLEASE MAKE A DECISION</div>
+
+        <h1>
+          So...
+          <br>
+          <span class="accent">what do you think?</span>
+        </h1>
+
+        <p class="description">
+          There are two options below.<br>
+          Choose wisely.
+        </p>
+
+        <div class="button-stage" id="buttonStage">
+
+          <button class="choice yes-button" id="yesButton">
+            YES <span class="button-arrow">→</span>
+          </button>
+
+          <button class="choice no-button" id="noButton">
+            NO
+          </button>
+
+          <div class="no-question" id="noQuestion"></div>
+
+        </div>
+
+        <div class="hint" id="hint">
+          <span class="hint-icon">↳</span>
+          <span>One of these buttons is behaving strangely.</span>
+        </div>
+
+      </div>
+
+      <div class="bottom-note">
+        <span>DON'T OVERTHINK IT</span>
+        <span>YOU KNOW WHAT TO DO</span>
+      </div>
+
+    </section>
+
+
+    <!-- STEP 2 -->
+    <section class="screen" id="screen-details">
+
+      <div class="eyebrow">
+        <span>DECISION RECORDED</span>
+        <span class="line"></span>
+        <span>02 — 02</span>
+      </div>
+
+      <div class="content details-content">
+
+        <div class="small-label">WELL, THAT WAS EASY.</div>
+
+        <h1>
+          Let's make
+          <br>
+          <span class="accent">some plans.</span>
+        </h1>
+
+        <p class="description">
+          Pick a date and time.
+        </p>
+
+        <!-- DATE AND TIME FORM -->
+        <div class="form-box">
+
+          <div class="field">
+            <label for="date">DATE</label>
+            <input type="date" id="date" required>
+          </div>
+
+          <div class="field">
+            <label for="time">TIME</label>
+            <input type="time" id="time" required>
+          </div>
+
+          <button class="confirm-button" id="confirmButton">
+            <span>CONFIRM</span>
+            <span>↗</span>
+          </button>
+
+        </div>
+
+        <!-- MUSIC CONTROL -->
+        <button class="music-toggle" id="musicToggle" aria-label="Toggle music">
+  <span id="musicIcon">♫</span>
+  <span id="musicText">×</span>
+</button>
+
+        <button class="back-button" id="backButton">
+          ← GO BACK
+        </button>
+
+      </div>
+
+      <div class="bottom-note">
+        <span>ALMOST THERE</span>
+        <span>ONE LAST STEP</span>
+      </div>
+
+    </section>
+
+
+    <!-- STEP 3 -->
+    <section class="screen" id="screen-success">
+
+      <div class="eyebrow">
+        <span>ALL SET</span>
+        <span class="line"></span>
+        <span>COMPLETE</span>
+      </div>
+
+      <div class="content success-content">
+
+        <div class="success-mark">✓</div>
+
+        <div class="small-label">IT'S OFFICIAL</div>
+
+        <h1>
+          It's a
+          <br>
+          <span class="accent">plan.</span>
+        </h1>
+
+        <div class="result-box">
+
+          <div class="result-row">
+            <span>DATE</span>
+            <span id="resultDate">—</span>
+          </div>
+
+          <div class="result-row">
+            <span>TIME</span>
+            <span id="resultTime">—</span>
+          </div>
+
+        </div>
+
+        <p class="description">
+          Good. Now we have something to look forward to.
+        </p>
+
+        <button class="restart-button" id="restartButton">
+          START OVER ↻
+        </button>
+
+      </div>
+
+      <div class="bottom-note">
+        <span>THAT'S A DATE</span>
+        <span>SEE YOU SOON</span>
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="backgroundMusic" loop preload="auto">
+    <source src="sounds/background.mp3" type="audio/mpeg">
+  </audio>
+
+
+  <script src="./js/script.js"></script>
+
+</body>
+</html>
